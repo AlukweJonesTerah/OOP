@@ -105,4 +105,58 @@ let employee____: Employee = {
     }
 }
 
+function kgToLbs(weight: number | string): number{
+    // narrowing
+    if (typeof weight === "number")
+        return weight * 2.2
+    else
+        return parseInt(weight) * 2.2;
+}
 
+//  intertion types
+
+let weight: number & string
+
+type Draggable = {
+    drag: () => void
+}
+
+type Resizeable = {
+    resize: () => void
+}
+
+type UIWidget = Draggable & Resizeable;
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
+
+// literal types
+
+let quantity: 50 = 50
+
+let quantity_: 50 | 100 = 100
+
+type Quantity = 50 | 100
+
+let quantity__: Quantity = 100
+
+function greet(name: string | null){
+    if(name)
+        console.log(name.toUpperCase());
+    else
+        console.log('Hola')
+}
+
+greet(null)
+
+// operational chain
+
+type Customer = {
+    birthday: Date
+};
+
+function getCustomer(id:number): Customer | null | undefined {
+        return
+}
