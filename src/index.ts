@@ -39,3 +39,70 @@ let mySize: Size_ = Size_.Middle_
 console.log(mySize)
 
 // Function
+
+function calculationTax(income: number, taxYear: number): number{
+    if (taxYear < 2022)
+        return income * 1.2
+    return income * 1.3
+}
+
+calculationTax(10_1000, 2022)
+
+function calculationTax_(income: number, taxYear?: number): number {
+    if ((taxYear || 2024) < 2025)
+        return income * 1.2
+    return income * 1.3
+}
+
+calculationTax_(20_200,)
+
+function calculationTax__(income: number, taxYear = 2022): number {
+    if (taxYear < 2024)
+        return income * 1.2
+    return income * 1.3
+}
+calculationTax__(30_300)
+
+// Object
+
+let employee = {id: 13}
+
+let employee_: {
+    id: number,
+    name: String,
+} = {id: 1, name: ''}
+
+employee_.name = "Jones"
+
+let employee__:{
+    readonly id: number,
+    name: string
+} = {id: 1, name: "Alex"}
+
+let employee___:{
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+    name: "Alukwe",
+    retire: (date: Date) => {
+        console.log(date)
+    }
+}
+
+type Employee = {
+    readonly id: number,
+    name: string,
+    retire: (date: Date) => void
+}
+
+let employee____: Employee = {
+    id: 1,
+    name: "Alukwe",
+    retire: (date: Date) => {
+        console.log(date)
+    }
+}
+
+

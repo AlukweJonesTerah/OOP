@@ -30,4 +30,33 @@ var Size_;
 })(Size_ || (Size_ = {}));
 let mySize = Size_.Middle_;
 console.log(mySize);
+function calculationTax(income, taxYear) {
+    if (taxYear < 2022)
+        return income * 1.2;
+    return income * 1.3;
+}
+calculationTax(101000, 2022);
+function calculationTax_(income, taxYear) {
+    if ((taxYear || 2024) < 2025)
+        return income * 1.2;
+    return income * 1.3;
+}
+calculationTax_(20200);
+function calculationTax__(income, taxYear = 2022) {
+    if (taxYear < 2024)
+        return income * 1.2;
+    return income * 1.3;
+}
+calculationTax__(30300);
+let employee = { id: 13 };
+let employee_ = { id: 1, name: '' };
+employee_.name = "Jones";
+let employee__ = { id: 1, name: "Alex" };
+let employee___ = {
+    id: 1,
+    name: "Alukwe",
+    retire: (date) => {
+        console.log(date);
+    }
+};
 //# sourceMappingURL=index.js.map
